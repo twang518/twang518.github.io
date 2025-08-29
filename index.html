@@ -73,16 +73,33 @@
         }
 
         .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #2d3748;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
             font-size: 1.1rem;
             line-height: 1.8;
             color: #cbd5e0;
-            max-width: 600px;
         }
 
         .projects-grid {
             display: grid;
             gap: 30px;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
 
         .project-card {
@@ -92,6 +109,8 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             border: 1px solid #2d3748;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -103,46 +122,39 @@
         .project-title {
             font-size: 1.3rem;
             font-weight: 500;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: #f8fafc;
         }
 
         .project-description {
             color: #a0aec0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.6;
+            flex-grow: 1;
         }
 
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .tech-tag {
-            background: #2d3748;
+        .project-description b {
             color: #90cdf4;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid #4a5568;
+            font-weight: 600;
         }
 
-        .project-links {
-            display: flex;
-            gap: 15px;
+        .project-description i {
+            color: #e2e8f0;
+            font-style: italic;
         }
 
         .project-link {
             color: #90cdf4;
             text-decoration: none;
             font-weight: 500;
-            padding: 8px 16px;
+            padding: 10px 16px;
             border: 2px solid #90cdf4;
             border-radius: 6px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            text-align: center;
+            display: inline-block;
+            align-self: flex-start;
         }
 
         .project-link:hover {
@@ -196,6 +208,17 @@
                 font-size: 2rem;
             }
             
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -213,49 +236,40 @@
             <h1>Tong Wang, MD, PhD</h1>
         </header>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About</h2>
-                <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        
-        <div style="flex-shrink: 0;">
-          <img src="photo.jpg" alt="Tong Wang, MD, PhD" style="width: 180px; ">
-        </div>
-        
-        <div style="max-width: 600px; font-size: 1.1rem; color: #ccc;">
-          <p>
-            Hi, I'm Tong. I'm a physician-scientist currently completing residency at Stanford Pathology.
-            I am most passionate about translating basic research into innovative diagnostics.
-          </p>
-        </div>
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <img src="photo.jpg" alt="Tong Wang, MD, PhD" class="profile-image">
+                <div class="about-text">
+                    <p>
+                        Hi, I'm Tong. I'm a physician-scientist currently completing residency at Stanford Pathology.
+                        I am most passionate about translating basic research into innovative diagnostics.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3 class="project-title">DM-Seq</h3>
-                    <p class="project-description">Direct Methylation Sequencing (DM-Seq) is a fully enzymatic sequencing method that detects 5-methylcytosine (5mC) at single-base resolution. This work represents the technological foundation of two patents and a pre-seed diagnostic company ACE Genomics Inc.
-
-                    <b>Wang T</b>, Fowler JM, Liu L, Loo CE, Luo M, Schutsky EK, Berríos KN, DeNizio JE, Dvorak A, Downey N, Montermoso S, Pingul B, Nasrallah M, Gosal W, Wu H, Kohli RM. Unnatural DNA modifications enable direct enzymatic sequencing of 5-methylcytosine at single base resolution. <i>Nature Chemical Biology</i> 2023. 19, 1004–1012. 
-                    
+                    <p class="project-description">
+                        Direct Methylation Sequencing (DM-Seq) is a fully enzymatic sequencing method that detects 5-methylcytosine (5mC) at single-base resolution. This work represents the technological foundation of two patents and a pre-seed diagnostic company ACE Genomics Inc.
+                        <br><br>
+                        <b>Wang T</b>, Fowler JM, Liu L, Loo CE, Luo M, Schutsky EK, Berríos KN, DeNizio JE, Dvorak A, Downey N, Montermoso S, Pingul B, Nasrallah M, Gosal W, Wu H, Kohli RM. Unnatural DNA modifications enable direct enzymatic sequencing of 5-methylcytosine at single base resolution. <i>Nature Chemical Biology</i> 2023. 19, 1004–1012.
                     </p>
-                    </div>
-                    <div>
-                    <a href="dm-seq.pdf" class="project-links" target="_blank">View Project →</a>
-                    </div>
+                    <a href="dm-seq.pdf" class="project-link" target="_blank">View Project →</a>
                 </div>
 
                 <div class="project-card">
                     <h3 class="project-title">5cxmC</h3>
-                    <p class="project-description">I discovered the new DNA base 5-carboxymethylcytosine (5cxmC) for the first time. Unexpectedly, I found that only a single point mutation in an endogenous methyltransferase safeguards the <i>E. coli</i> genome from creating 5cxmC from the trace metabolite carboxy-SAM (CxSAM).
-
-                    <b>Wang T</b> and Kohli, RM. Discovery of an Unnatural DNA Modification Derived from a Natural Secondary Metabolite. <i>Cell Chemical Biology.</i> 2021, 28, 1-8.
-
+                    <p class="project-description">
+                        I discovered the new DNA base 5-carboxymethylcytosine (5cxmC) for the first time. Unexpectedly, I found that only a single point mutation in an endogenous methyltransferase safeguards the <i>E. coli</i> genome from creating 5cxmC from the trace metabolite carboxy-SAM (CxSAM).
+                        <br><br>
+                        <b>Wang T</b> and Kohli, RM. Discovery of an Unnatural DNA Modification Derived from a Natural Secondary Metabolite. <i>Cell Chemical Biology.</i> 2021, 28, 1-8.
                     </p>
-                    </div>
-                    <div>
-                    <a href="5cxmC.pdf" class="project-links" target="_blank">View Project →</a>
-                    </div>
+                    <a href="5cxmC.pdf" class="project-link" target="_blank">View Project →</a>
                 </div>
             </div>
         </section>
