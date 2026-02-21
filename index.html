@@ -19,13 +19,17 @@
     <meta property="og:title" content="Tong Wang, MD, PhD - Physician-Scientist">
     <meta property="og:description" content="Physician-scientist at Stanford Pathology translating basic research into innovative diagnostics.">
     <meta property="og:image" content="https://www.twangmdphd.com/photo.jpg">
-    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="Tong Wang, MD, PhD">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.twangmdphd.com/">
     <meta property="twitter:title" content="Tong Wang, MD, PhD - Physician-Scientist">
     <meta property="twitter:description" content="Physician-scientist at Stanford Pathology translating basic research into innovative diagnostics.">
     <meta property="twitter:image" content="https://www.twangmdphd.com/photo.jpg">
+    <meta property="twitter:image:alt" content="Tong Wang, MD, PhD">
     <meta name="twitter:site" content="@twang0518">
     
     <style>
@@ -259,6 +263,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@id": "https://www.twangmdphd.com/#person",
       "@type": ["Person", "MedicalPerson"],
       "name": "Tong Wang",
       "honorificSuffix": ["MD", "PhD"],
@@ -266,7 +271,22 @@
       "url": "https://www.twangmdphd.com/",
       "image": "https://www.twangmdphd.com/photo.jpg",
       "email": "twang518@stanford.edu",
+      "inLanguage": "en",
       "description": "Physician-scientist completing residency at Stanford Pathology, passionate about translating basic research into innovative diagnostics.",
+      "medicalSpecialty": {
+        "@type": "MedicalSpecialty",
+        "name": "Pathology"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Stanford University Medical Center",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Stanford",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      },
       "affiliation": {
         "@type": "MedicalOrganization",
         "name": "Stanford Medicine Department of Pathology",
@@ -281,12 +301,24 @@
         "https://profiles.stanford.edu/315717",
         "https://med.stanford.edu/profiles/315717",
         "https://x.com/twang0518",
+        "https://bsky.app/profile/twangmdphd.bsky.social",
         "https://npidb.org/doctors/student_health_care/student-in-an-organized-health-care-education-training-program_390200000x/1730877929.aspx",
         "https://www.kohlilab.org/lab-members",
         "https://greenleaf.stanford.edu/people",
         "https://www.doximity.com/pub/tong-wang-md"
       ],
       "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Perelman School of Medicine at the University of Pennsylvania",
+          "url": "https://www.med.upenn.edu/",
+          "description": "MD, PhD",
+          "parentOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Pennsylvania",
+            "sameAs": "https://www.wikidata.org/wiki/Q49117"
+          }
+        },
         {
           "@type": "EducationalOrganization",
           "name": "Stanford University School of Medicine",
@@ -315,6 +347,9 @@
           "datePublished": "2025",
           "url": "https://doi.org/10.1101/2025.09.25.678665",
           "sameAs": "https://pubmed.ncbi.nlm.nih.gov/41040263/",
+          "inLanguage": "en",
+          "abstract": "A technology to sensitively detect CRISPR base editor off-targets in cells, with methods for triaging non-coding edits for epigenetic dysregulation using deep learning.",
+          "keywords": ["CRISPR", "base editors", "off-target detection", "beCasKAS", "epigenetic regulation", "deep learning"],
           "publisher": {
             "@type": "Organization",
             "name": "bioRxiv"
@@ -330,6 +365,9 @@
           "datePublished": "2023",
           "url": "https://doi.org/10.1038/s41589-023-01318-1",
           "sameAs": "https://pubmed.ncbi.nlm.nih.gov/37322153/",
+          "inLanguage": "en",
+          "abstract": "Direct Methylation Sequencing (DM-Seq) is a fully enzymatic sequencing method that detects 5-methylcytosine at single-base resolution, enabling cancer detection and diagnostics.",
+          "keywords": ["DNA methylation", "DM-Seq", "5-methylcytosine", "sequencing", "cancer diagnostics", "epigenetics"],
           "publisher": {
             "@type": "Organization",
             "name": "Nature Chemical Biology"
@@ -345,6 +383,9 @@
           "datePublished": "2021",
           "url": "https://doi.org/10.1016/j.chembiol.2020.09.006",
           "sameAs": "https://pubmed.ncbi.nlm.nih.gov/33053370/",
+          "inLanguage": "en",
+          "abstract": "Discovery of the novel DNA base 5-carboxymethylcytosine (5cxmC), showing how a single point mutation in endogenous methyltransferase protects E. coli genome from carboxy-SAM metabolites.",
+          "keywords": ["DNA modification", "5-carboxymethylcytosine", "5cxmC", "methyltransferase", "carboxy-SAM", "E. coli"],
           "publisher": {
             "@type": "Organization",
             "name": "Cell Chemical Biology"
@@ -356,6 +397,8 @@
           "@type": "AnalysisNewsArticle",
           "headline": "The Other COVID-19 Metric",
           "url": "https://covidtracking.com/analysis-updates/the-other-covid-19-metric",
+          "datePublished": "2020",
+          "inLanguage": "en",
           "publisher": {
             "@type": "Organization",
             "name": "The COVID Tracking Project"
@@ -365,6 +408,8 @@
           "@type": "OpinionNewsArticle",
           "headline": "Face masks have become a flash point for racism against Chinese Americans",
           "url": "https://www.inquirer.com/opinion/commentary/coronavirus-covid-masks-racism-chinese-american-20200818.html",
+          "datePublished": "2020-08-18",
+          "inLanguage": "en",
           "image": "https://www.inquirer.com/resizer/v2/NXNKIY463ZDNTBQVHPH7Z2RLYM.jpg?auth=f5c2ec4a2312681638ae380a44eb55c53954098b00bd0f72145a84cd75f7537f&width=800&height=533&smart=true",
           "publisher": {
             "@type": "Organization",
@@ -373,16 +418,80 @@
         },
         {
           "@type": "NewsArticle",
+          "headline": "Tong Wang, B.S. 2015",
           "url": "https://chem.wisc.edu/2016/04/18/tong-wang-b-s-2015/",
-          "image": "https://chem.wisc.edu/wp-content/uploads/sites/1130/2019/07/2016_0418_WangTong.png"
+          "datePublished": "2016-04-18",
+          "inLanguage": "en",
+          "image": "https://chem.wisc.edu/wp-content/uploads/sites/1130/2019/07/2016_0418_WangTong.png",
+          "publisher": {
+            "@type": "Organization",
+            "name": "UW-Madison Chemistry"
+          }
         },
         {
           "@type": "NewsArticle",
-          "url": "https://www.pennmedicine.org/news/new-dna-sequencing-method-may-lead-to-earlier-cancer-detection"
+          "headline": "New DNA sequencing method may lead to earlier cancer detection",
+          "url": "https://www.pennmedicine.org/news/new-dna-sequencing-method-may-lead-to-earlier-cancer-detection",
+          "datePublished": "2023",
+          "inLanguage": "en",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Penn Medicine News"
+          }
         },
         {
           "@type": "NewsArticle",
-          "url": "https://penntoday.upenn.edu/news/new-precise-and-efficient-dna-sequencing-method-may-lead-easier-testing-and-earlier-cancer"
+          "headline": "New precise and efficient DNA sequencing method may lead to easier testing and earlier cancer detection",
+          "url": "https://penntoday.upenn.edu/news/new-precise-and-efficient-dna-sequencing-method-may-lead-easier-testing-and-earlier-cancer",
+          "datePublished": "2023",
+          "inLanguage": "en",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Penn Today"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.twangmdphd.com/",
+      "name": "Tong Wang, MD, PhD - Physician-Scientist",
+      "description": "Personal website of Tong Wang, physician-scientist at Stanford Pathology",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://www.twangmdphd.com/#person"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.twangmdphd.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.twangmdphd.com/#about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Projects",
+          "item": "https://www.twangmdphd.com/#projects"
         }
       ]
     }
