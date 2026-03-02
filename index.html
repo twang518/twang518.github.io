@@ -264,7 +264,7 @@
     {
       "@context": "https://schema.org",
       "@id": "https://www.twangmdphd.com/#person",
-      "@type": ["Person", "MedicalPerson"],
+      "@type": "Person",
       "name": "Tong Wang",
       "honorificSuffix": ["MD", "PhD"],
       "jobTitle": "Physician-Scientist",
@@ -273,10 +273,7 @@
       "email": "twang518@stanford.edu",
       "inLanguage": "en",
       "description": "Physician-scientist completing residency at Stanford Pathology, passionate about translating basic research into innovative diagnostics.",
-      "medicalSpecialty": {
-        "@type": "MedicalSpecialty",
-        "name": "Pathology"
-      },
+      "knowsAbout": "Pathology",
       "workLocation": {
         "@type": "Place",
         "name": "Stanford University Medical Center",
@@ -334,62 +331,6 @@
           "name": "Stanford Medicine Department of Pathology",
           "url": "https://med.stanford.edu/pathology.html",
           "description": "Pathology Residency Program"
-        }
-      ],
-      "author": [
-        {
-          "@type": "ScholarlyArticle",
-          "headline": "Sensitive, direct detection of non-coding off-target base editor unwinding and editing in primary cells",
-          "author": {
-            "@type": "Person",
-            "name": "Tong Wang"
-          },
-          "datePublished": "2025",
-          "url": "https://doi.org/10.1101/2025.09.25.678665",
-          "sameAs": "https://pubmed.ncbi.nlm.nih.gov/41040263/",
-          "inLanguage": "en",
-          "abstract": "A technology to sensitively detect CRISPR base editor off-targets in cells, with methods for triaging non-coding edits for epigenetic dysregulation using deep learning.",
-          "keywords": ["CRISPR", "base editors", "off-target detection", "beCasKAS", "epigenetic regulation", "deep learning"],
-          "publisher": {
-            "@type": "Organization",
-            "name": "bioRxiv"
-          }
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "headline": "Direct enzymatic sequencing of 5-methylcytosine at single-base resolution",
-          "author": {
-            "@type": "Person",
-            "name": "Tong Wang"
-          },
-          "datePublished": "2023",
-          "url": "https://doi.org/10.1038/s41589-023-01318-1",
-          "sameAs": "https://pubmed.ncbi.nlm.nih.gov/37322153/",
-          "inLanguage": "en",
-          "abstract": "Direct Methylation Sequencing (DM-Seq) is a fully enzymatic sequencing method that detects 5-methylcytosine at single-base resolution, enabling cancer detection and diagnostics.",
-          "keywords": ["DNA methylation", "DM-Seq", "5-methylcytosine", "sequencing", "cancer diagnostics", "epigenetics"],
-          "publisher": {
-            "@type": "Organization",
-            "name": "Nature Chemical Biology"
-          }
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "headline": "Discovery of an Unnatural DNA Modification Derived from a Natural Secondary Metabolite",
-          "author": {
-            "@type": "Person",
-            "name": "Tong Wang"
-          },
-          "datePublished": "2021",
-          "url": "https://doi.org/10.1016/j.chembiol.2020.09.006",
-          "sameAs": "https://pubmed.ncbi.nlm.nih.gov/33053370/",
-          "inLanguage": "en",
-          "abstract": "Discovery of the novel DNA base 5-carboxymethylcytosine (5cxmC), showing how a single point mutation in endogenous methyltransferase protects E. coli genome from carboxy-SAM metabolites.",
-          "keywords": ["DNA modification", "5-carboxymethylcytosine", "5cxmC", "methyltransferase", "carboxy-SAM", "E. coli"],
-          "publisher": {
-            "@type": "Organization",
-            "name": "Cell Chemical Biology"
-          }
         }
       ],
       "subjectOf": [
@@ -465,6 +406,70 @@
           }
         }
       ]
+    }
+    </script>
+
+    <!-- ScholarlyArticle Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Sensitive, direct detection of non-coding off-target base editor unwinding and editing in primary cells",
+      "author": {
+        "@id": "https://www.twangmdphd.com/#person"
+      },
+      "datePublished": "2025",
+      "url": "https://doi.org/10.1101/2025.09.25.678665",
+      "sameAs": "https://pubmed.ncbi.nlm.nih.gov/41040263/",
+      "inLanguage": "en",
+      "abstract": "A technology to sensitively detect CRISPR base editor off-targets in cells, with methods for triaging non-coding edits for epigenetic dysregulation using deep learning.",
+      "keywords": ["CRISPR", "base editors", "off-target detection", "beCasKAS", "epigenetic regulation", "deep learning"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "bioRxiv"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Direct enzymatic sequencing of 5-methylcytosine at single-base resolution",
+      "author": {
+        "@id": "https://www.twangmdphd.com/#person"
+      },
+      "datePublished": "2023",
+      "url": "https://doi.org/10.1038/s41589-023-01318-1",
+      "sameAs": "https://pubmed.ncbi.nlm.nih.gov/37322153/",
+      "inLanguage": "en",
+      "abstract": "Direct Methylation Sequencing (DM-Seq) is a fully enzymatic sequencing method that detects 5-methylcytosine at single-base resolution, enabling cancer detection and diagnostics.",
+      "keywords": ["DNA methylation", "DM-Seq", "5-methylcytosine", "sequencing", "cancer diagnostics", "epigenetics"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nature Chemical Biology"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Discovery of an Unnatural DNA Modification Derived from a Natural Secondary Metabolite",
+      "author": {
+        "@id": "https://www.twangmdphd.com/#person"
+      },
+      "datePublished": "2021",
+      "url": "https://doi.org/10.1016/j.chembiol.2020.09.006",
+      "sameAs": "https://pubmed.ncbi.nlm.nih.gov/33053370/",
+      "inLanguage": "en",
+      "abstract": "Discovery of the novel DNA base 5-carboxymethylcytosine (5cxmC), showing how a single point mutation in endogenous methyltransferase protects E. coli genome from carboxy-SAM metabolites.",
+      "keywords": ["DNA modification", "5-carboxymethylcytosine", "5cxmC", "methyltransferase", "carboxy-SAM", "E. coli"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cell Chemical Biology"
+      }
     }
     </script>
 
