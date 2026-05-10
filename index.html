@@ -236,28 +236,53 @@
         }
 
         .news-photo {
-            width: 160px;
-            min-width: 120px;
+            width: 320px;
+            min-width: 240px;
             vertical-align: top;
             padding: 20px 0;
         }
 
         .news-photo img {
-            width: 150px;
-            height: 110px;
+            width: 300px;
+            height: 220px;
             object-fit: cover;
+            object-position: bottom;
             border-radius: 8px;
             border: 1px solid #2d3748;
             display: block;
+            cursor: zoom-in;
         }
 
         .news-photo-empty {
-            width: 150px;
-            height: 110px;
+            width: 300px;
+            height: 220px;
             border-radius: 8px;
             background: #1a202c;
             border: 1px solid #2d3748;
             display: block;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
         @media (max-width: 768px) {
@@ -282,7 +307,7 @@
 
             .news-photo img, .news-photo-empty {
                 width: 100%;
-                height: 180px;
+                height: 220px;
             }
         }
 
@@ -709,6 +734,13 @@
                         </td>
                         <td class="news-photo"><img src="nature.png" alt="Nature Conferences Cracking the Code 2"></td>
                     </tr>
+                    <tr>
+                        <td class="news-date">Jun 2025</td>
+                        <td class="news-desc">
+                            Congratulations to Georgi on his <a href="https://www.biorxiv.org/content/10.1101/2025.06.27.662080v1" target="_blank" rel="noopener noreferrer">preprint</a> using the dsDNA deaminase CseDa01 for single-molecule footprinting!
+                        </td>
+                        <td class="news-photo"><span class="news-photo-empty"></span></td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -722,5 +754,27 @@
             </div>
         </div>
     </div>
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.news-photo img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
