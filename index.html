@@ -189,6 +189,103 @@
             transform: translateY(-1px);
         }
 
+        .news-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .news-table tr {
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .news-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            width: 110px;
+            min-width: 90px;
+            vertical-align: top;
+            padding: 20px 20px 20px 0;
+            font-size: 0.85rem;
+            color: #718096;
+            white-space: nowrap;
+        }
+
+        .news-desc {
+            vertical-align: top;
+            padding: 20px 30px 20px 0;
+            color: #a0aec0;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .news-desc b {
+            color: #90cdf4;
+            font-weight: 600;
+        }
+
+        .news-desc a {
+            color: #90cdf4;
+            text-decoration: none;
+        }
+
+        .news-desc a:hover {
+            text-decoration: underline;
+        }
+
+        .news-photo {
+            width: 160px;
+            min-width: 120px;
+            vertical-align: top;
+            padding: 20px 0;
+        }
+
+        .news-photo img {
+            width: 150px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #2d3748;
+            display: block;
+        }
+
+        .news-photo-empty {
+            width: 150px;
+            height: 110px;
+            border-radius: 8px;
+            background: #1a202c;
+            border: 1px solid #2d3748;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .news-table, .news-table tbody, .news-table tr, .news-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .news-date {
+                padding: 20px 0 4px 0;
+                width: 100%;
+            }
+
+            .news-desc {
+                padding: 4px 0 12px 0;
+            }
+
+            .news-photo {
+                padding: 0 0 20px 0;
+                width: 100%;
+            }
+
+            .news-photo img, .news-photo-empty {
+                width: 100%;
+                height: 180px;
+            }
+        }
+
         .contact-info {
             text-align: center;
             margin-top: 60px;
@@ -592,6 +689,28 @@
                     <a href="5cxmC.pdf" class="project-link" target="_blank">View Project →</a>
                 </div>
             </div>
+        </section>
+
+        <section id="news">
+            <h2>News</h2>
+            <table class="news-table">
+                <tbody>
+                    <tr>
+                        <td class="news-date">Jan 2026</td>
+                        <td class="news-desc">
+                            I had a great time meeting new friends and catching up with my old Kohli labmates at <a href="https://labs.uthscsa.edu/rsh/deaminet/" target="_blank" rel="noopener noreferrer">Deaminet</a> in Palm Springs. Our beCasKAS method was highlighted here by <a href="https://blog.addgene.org/deaminet-2026-breakthroughs-in-base-editing-deaminase-biology-and-therapeutic-translation" target="_blank" rel="noopener noreferrer">Addgene</a> along with many other amazing projects.
+                        </td>
+                        <td class="news-photo"><img src="deaminet.png" alt="Deaminet 2026 in Palm Springs"></td>
+                    </tr>
+                    <tr>
+                        <td class="news-date">Dec 2025</td>
+                        <td class="news-desc">
+                            I had the opportunity to meet many of the leaders in the nucleic acid therapeutics community. Thank you to <a href="https://natureconferences.streamgo.live/cracking-the-code-2/register?utm_medium=EventBoard&utm_source=Naturecareers&utm_campaign=CONR_NATCF_CFUL_NA_PCFU_05WHR_CC2&refer=Naturecareers" target="_blank" rel="noopener noreferrer">Nature Conferences</a> for allowing me the opportunity to share beCasKAS.
+                        </td>
+                        <td class="news-photo"><img src="nature.png" alt="Nature Conferences Cracking the Code 2"></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <div class="contact-info">
